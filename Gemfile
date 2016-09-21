@@ -30,6 +30,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'angularjs-rails'
 gem 'angular_rails_csrf'
 
+gem 'devise'
+source "http://rails-assets.org" do
+  gem 'rails-assets-angular-devise'
+end
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 

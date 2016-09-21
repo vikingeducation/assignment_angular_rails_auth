@@ -1,1 +1,1 @@
-var myApp = angular.module('myApp', ['ui.router', 'restangular']);
+var myApp = angular.module('myApp', ['ui.router', 'restangular', 'Devise']);
