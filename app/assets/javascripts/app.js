@@ -1,5 +1,5 @@
 "use strict";
-var app = angular.module('app', ['ui.router', 'restangular']);
+var app = angular.module('app', ['ui.router', 'restangular', 'Devise']);
 
 
 app.factory('_', ['$window', function($window) {
@@ -33,7 +33,11 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
         views:{
           'messages': {
             templateUrl: 'templates/messages/index.html',
-            controller: 'MessagesCtrl'   
+            controller: 'MessagesCtrl'
+          },
+          'users': {
+            templateUrl: 'templates/users/index.html',
+            controller: 'UsersCtrl'
           }
         }
     });
