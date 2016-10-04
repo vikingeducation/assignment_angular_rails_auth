@@ -16,6 +16,7 @@
 //= require lodash
 
 //= require angular
+//= require angular-devise
 //= require angular-ui-router.min
 
 //= require restangular.min

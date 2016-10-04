@@ -1,4 +1,4 @@
-App = angular.module('App', ['ui.router', 'restangular']);
+App = angular.module('App', ['ui.router', 'restangular', 'Devise']);
 
 App.factory('_', ['$window', function($window) {
   return $window._;
