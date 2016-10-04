@@ -10,4 +10,15 @@ App.config(
   RestangularProvider.setBaseUrl('/api/v1');
   RestangularProvider.setRequestSuffix('.json');
 
+  $urlRouterProvider.otherwise("/messages")
+
+  $stateProvider
+
+  .state("user", {
+    url:"/user",
+    templateUrl: "/templates/user.html",
+    controller:"userCtrl"
+  })
+
+
 }]);
