@@ -1,0 +1,8 @@
+<%= content_for(:angular_app) do %>
+  ng-app="app"
+<% end %>
+
+<p>{{'Hello Angular on Rails'}}</p>
+<div ui-view="messages"></div>
+
+<div ui-view="users"></div>
