@@ -6,9 +6,7 @@ myApp.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider.state("main", {
     url: "/",
     templateUrl: "/templates/test.html",
-    controller: function($scope) {
-      console.log("controller")
-    }
+    controller: 'StaticPagesCtrl'
   })
 })
 
@@ -17,6 +15,7 @@ myApp.controller("StaticPagesCtrl", ["$scope", "Restangular", "Auth", function($
 
   Auth.currentUser().then(function(response) {
     $scope.user = response
+    console.log($scope.user)
   })
 
 }])
