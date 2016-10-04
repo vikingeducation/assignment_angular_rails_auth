@@ -1,0 +1,12 @@
+<%= content_for(:angular_app) do %>
+  ng-app="app"
+  ng-controller="UsersCtrl"
+<% end %>
+
+
+<p>Hello Angular Alex half-sucks.</p>
+
+<h1>Welcome {{ currentUser.email}}!</h1>
+
+<%= link_to "Logout", destroy_user_session_path, method: "delete" %>
+
