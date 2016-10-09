@@ -1,6 +1,7 @@
 <div ng-controller="MyCtrl">
 
-
+  <h1>welcome {{ currentUser.email }}</h1>
+  <h3><%= link_to "logout", destroy_user_session_path, method: :delete %></h3>
   <h1>{{message}}</h1>
 
 

@@ -12,6 +12,7 @@
 //
 
 //= require angular
+//= require angular-devise
 //= require angular-ui-router.min.js
 //= require underscore-min.js
 //= require restangular.min.js
