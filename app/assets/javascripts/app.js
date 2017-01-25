@@ -1,4 +1,13 @@
-var myApp = angular.module('myApp', ['ui.router', 'restangular'])
+var myApp = angular.module('myApp', ['ui.router', 'restangular',  'Devise'])
+
+.config(["$httpProvider", function($httpProvider) {
+  var token = $('meta[name=csrf-token]')
+  .attr('content');
+  $httpProvider
+      .defaults
+      .headers
+      .common['X-CSRF-Token'] = token;
+  }])
 
 .config(['RestangularProvider', function(RestangularProvider){
   RestangularProvider.setBaseUrl('/api/v1');
@@ -12,7 +21,8 @@ var myApp = angular.module('myApp', ['ui.router', 'restangular'])
     $stateProvider
       .state('root', {
         url: '',
-        template: 'Hello angular!'
+        templateUrl: '/templates/user.html',
+        controller: 'UsersCtrl'
       })
   }])
 
