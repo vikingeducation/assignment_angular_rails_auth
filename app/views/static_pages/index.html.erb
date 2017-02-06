@@ -1,0 +1,9 @@
+<%= content_for(:App) do %>
+  <div ng-app="App">
+  <div ng-controller="AppCtrl">
+    <h1>Welcome, {{ currentUser.email }}</h1>
+    <a data-method="delete" href="/users/sign_out" rel="nofollow">Logout</a>
+    <p>{{ hello }}</p>
+  </div>
+</div>
+<% end %>
