@@ -12,9 +12,16 @@ gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
-gem 'angularjs-rails'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.5'
+
+gem 'angularjs-rails'
+gem 'angular_rails_csrf'
+gem 'devise'
+
+source "https://rails-assets.org" do
+  gem "rails-assets-angular-devise"
+end
 
 group :development, :test do
   gem 'byebug', platform: :mri
