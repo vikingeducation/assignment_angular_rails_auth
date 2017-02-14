@@ -26,6 +26,9 @@ var myApp = angular.module('myApp', ['ui.router', 'restangular',  'Devise'])
       })
   }])
 
+.config(['$locationProvider', function($locationProvider) {
+  $locationProvider.hashPrefix('');
+}])
 .run(function($rootScope){
   $rootScope.$on("$stateChangeError", console.log.bind(console));
 });
