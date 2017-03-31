@@ -13,3 +13,13 @@ module AssignmentAngularRailsAuthSprint
     # -- all .rb files in that directory are automatically loaded.
   end
 end
+
+module RailsApp
+  class Application < Rails::Application
+    # ...
+
+    config.to_prepare do
+      DeviseController.respond_to :html, :json
+    end
+  end
+end

@@ -8,6 +8,11 @@ end
 gem 'angularjs-rails'
 gem 'angular_rails_csrf'
 
+gem 'devise'
+source "https://rails-assets.org" do
+  gem "rails-assets-angular-devise"
+end
+
 gem 'bootstrap-sass', '~> 3.3.6'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
