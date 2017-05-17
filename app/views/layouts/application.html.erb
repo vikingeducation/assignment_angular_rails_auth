@@ -11,10 +11,10 @@
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 
-  <body>
-    <h1>Welcome from the layout {{ currentUser.email }}!</h1>
+  <body class="container">
+    <!-- <h1>Welcome from the layout {{ currentUser.email }}!</h1> -->
+    <!-- <a data-method="delete" href="/users/sign_out" rel="nofollow">Logout</a> -->
 
-    <a data-method="delete" href="/users/sign_out" rel="nofollow">Logout</a>
     <%= yield %>
   </body>
 </html>
