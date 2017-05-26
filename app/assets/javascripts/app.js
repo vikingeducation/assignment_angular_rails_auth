@@ -17,6 +17,10 @@ MyApp.controller('UsersCtrl',
         console.error(response);
       });
 
+    $scope.logOut = function(){
+      Auth.logout();
+    };
+
   }]);
 
 
@@ -27,8 +31,8 @@ MyApp.config(function($stateProvider, $urlRouterProvider) {
       url: '',
       views: {
         "": {
-          template: 'app.js template message!',
-          // controller: 'MessagesCtrl'
+          template: '<div>Welcome: {{ currentUser.email }} <a data-method="delete" href="/users/sign_out" rel="nofollow">Logout</a></div>',
+          controller: 'UsersCtrl'
         }
       }
     })
